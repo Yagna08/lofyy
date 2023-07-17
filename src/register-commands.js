@@ -3,8 +3,8 @@ const { REST, Routes, ApplicationCommandOptionType } = require('discord.js');
 
 const commands = [
     {
-        name: 'p',
-        description: 'Plays the URL',
+        name: 'play',
+        description: 'Plays the query or youtube link that you provide',
         options: [
             {
                 name: 'link',
@@ -12,6 +12,30 @@ const commands = [
                 type: ApplicationCommandOptionType.String,
                 required: true,
             },
+        ],
+    },
+    {
+        name: 'search',
+        description: 'searches for the query that you provide',
+        options: [
+            {
+                name: 'search',
+                description: 'Write your query here',
+                type: ApplicationCommandOptionType.String,
+                required: true,
+            },
+        ],
+    },
+    {
+        name: 'leave',
+        description: 'Leaves the channel',
+        options: [
+        ],
+    },
+    {
+        name: 'skip',
+        description: 'Skips the channel',
+        options: [
         ],
     },
 ];
